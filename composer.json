@@ -1,6 +1,6 @@
 {
   "name": "derralf/silverstripe-mobiledetect",
-  "description": "simple extension to detect mobile devices - requires serbanghita/Mobile-Detect",
+  "description": "Simple extension to detect mobile devices",
   "type": "silverstripe-vendormodule",
   "keywords": [
     "silverstripe",
@@ -10,10 +10,8 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "silverstripe/cms": "^4",
-    "silverstripe/vendor-plugin": "^1.0",
-    "mobiledetect/mobiledetectlib": "^2.8"
-
+    "silverstripe/framework": "^5",
+    "mobiledetect/mobiledetectlib": "^4.8"
   },
   "extra": {
     "branch-alias": {
@@ -23,6 +21,12 @@
   "autoload": {
     "psr-4": {
       "Derralf\\MobileDetect\\": "src/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "silverstripe/vendor-plugin": true
     }
   }
 }
