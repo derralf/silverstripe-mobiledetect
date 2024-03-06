@@ -2,9 +2,10 @@
 
 ## Requirements
 
-- silverstripe/cms ^4
-- mobiledetect/mobiledetectlib ^2
+- silverstripe/cms ^5
+- mobiledetect/mobiledetectlib ^4.8
 
+For a SilverStripe 4.3 compatible version of this module, please see the 1.x release line [1.x release line](https://github.com/derralf/silverstripe-mobiledetect/tree/1.0).
 
 ## Installation
 
