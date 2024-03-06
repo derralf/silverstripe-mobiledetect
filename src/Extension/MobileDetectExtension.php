@@ -2,40 +2,29 @@
 
 namespace Derralf\MobileDetect;
 
-use Mobile_Detect;
+use Detection\MobileDetect;
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\ORM\DataObject;
 
 class MobileDetectExtension extends DataExtension
 {
-
     public function isMobile()
     {
-        $detect = new Mobile_Detect;
-        if ($detect->isMobile()) {
-            return true;
-        }
-        return false;
+        $detect = new MobileDetect();
+        return $detect->isMobile();
     }
 
 
     public function isTablet()
     {
-        $detect = new Mobile_Detect;
-        if ($detect->isTablet()) {
-            return true;
-        }
-        return false;
+        $detect = new MobileDetect();
+        return $detect->isTablet();
     }
 
 
     public function isPhone()
     {
-        $detect = new Mobile_Detect;
-        if ($detect->isMobile() && !$detect->isTablet()) {
-            return true;
-        }
-        return false;
+        $detect = new MobileDetect();
+        return ($detect->isMobile() && !$detect->isTablet());
     }
-
 }
